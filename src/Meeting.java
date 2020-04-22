@@ -14,14 +14,16 @@ public class Meeting {
 
     //todo add method called addEmployee to add employee to the list employees
 
-    //todo add method called removeLastEmployee to remove last employee in the list employees
-
+    public void removeLastEmployee(){
+        if(employees.size() <= 0)
+            throw new IllegalStateException();
+        employees.remove(employees.size() - 1);
+    }
 
 
     public void printEmployees(){
-        //todo print employee number
         for (int i = 0; i < employees.size(); i++) {
-            System.out.println(employees.get(i));
+            System.out.println("Employee number : " + i +" " + employees.get(i));
         }
     }
     public ArrayList<Employee> getEmployees() {
