@@ -12,12 +12,17 @@ public class Meeting {
         this.dateOfMeething = dateOfMeething;
     }
 
+
+    public void removeLastEmployee(){
+        if(employees.size() <= 0)
+            throw new IllegalStateException();
+        employees.remove(employees.size() - 1);
+    }
     public void addEmployee(Employee employee){
         if(employee == null)
             throw new IllegalArgumentException();
         employees.add(employee);
     }
-    //todo add method called removeLastEmployee to remove last employee in the list employees
 
 
 
